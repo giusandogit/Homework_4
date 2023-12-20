@@ -1,0 +1,10 @@
+local_costmap:
+  global_frame: map
+  robot_base_frame: base_footprint
+  update_frequency: 5.0         # Step 3b(II): 3b(I) + update_frequency from 5.0 to 8.0
+  publish_frequency: 10.0 
+  static_map: false
+  rolling_window: true
+  width: 7.0                    # Step 3b(II): 3b(I) + width from 7 to 15
+  height: 7.0                   # Step 3b(II): 3b(I) + height from 7 to 15
+  resolution: 0.03              # Step 3b(II): 3b(I) + resolution from 0.03 to 0.1

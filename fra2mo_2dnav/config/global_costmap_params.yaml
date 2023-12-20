@@ -1,0 +1,12 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_footprint
+  update_frequency: 5.0       # Step 3b(II): 3b(I) + update_frequency from 5.0 to 8.0
+  publish_frequency: 2.0
+  #always_send_full_costmap: false #default is false
+  rolling_window: false
+  resolution: 0.05   # Step 3b(II): 3b(I) + resolution from 0.05 to 0.2
+  width: 30          # Step 3b(II): 3b(I) + width from 30 to 40
+  height: 30         # Step 3b(II): 3b(I) + height from 30 to 40 
+  origin_x: -15 
+  origin_y: -15 
