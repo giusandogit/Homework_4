@@ -33,8 +33,8 @@ class TF_NAV {
         void position_pub();
         void goal_listener();
         void send_goal();
-        // -------- Step 4b -----------
-        void broadcast_listener();
+        // -------- Step 4c -----------
+       // void broadcast_listener();    // Not necessary
         // ----------------------------
     private:
 

@@ -59,7 +59,7 @@ void PoseCallback(const geometry_msgs::PoseStamped & msg)   // Step 4c: Callback
     transform.setRotation(q);
     br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "map", "aruco_frame"));  // "aruco_frame" is the frame I need to check with "tf_echo"
 }
-
+/*------------------------- This commented listener is NOT necessary ------------------------
 void TF_NAV::broadcast_listener() {    // Step 4c: function to listen the broadcast ArUco pose
     ros::Rate r( 5 );
     tf::TransformListener listener;
@@ -80,6 +80,7 @@ void TF_NAV::broadcast_listener() {    // Step 4c: function to listen the broadc
     }
  
 }
+*/
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -796,7 +797,7 @@ void TF_NAV::run() {
     boost::thread tf_listener_fun_t( &TF_NAV::tf_listener_fun, this );
 
     //-------------- Step 4c ------------------
-    boost::thread broadcast_listener_t( &TF_NAV::broadcast_listener, this );
+   // boost::thread broadcast_listener_t( &TF_NAV::broadcast_listener, this );   // Not necessary
     //-----------------------------------------
     
     boost::thread tf_listener_goal_t( &TF_NAV::goal_listener, this );
