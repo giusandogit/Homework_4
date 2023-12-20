@@ -1,0 +1,14 @@
+material marker__115
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture aruco-115.png  // 4x4_1000-115.png is the wrong one
+			}
+		}
+	}
+}
+

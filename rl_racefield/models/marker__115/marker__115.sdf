@@ -1,0 +1,42 @@
+
+
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="marker__115">
+    <static>true</static>
+    <link name="marker">
+      <gravity>false</gravity>
+      <visual name="tag">
+        <geometry>
+          <box>
+            <size>0.10 0.10 0.002</size>  <!-- changed from 30 to 10 cm -->
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://marker__115/material/scripts</uri>
+            <uri>model://marker__115/material/textures</uri>
+            <name>marker__115</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="support">    
+        <geometry>
+          <box>
+            <size>0.10 0.10 0.001</size>  <!-- changed from 32 to 10 cm -->
+          </box>
+        </geometry>
+        <material>Gazebo/White</material> 
+      </visual>
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.10 0.10 0.001</size>  <!-- changed from 32 to 10 cm -->
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
+
